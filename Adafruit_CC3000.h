@@ -44,7 +44,6 @@
 #else
 #define CHECK_PRINTER if(false)
 #endif
-
 #define WLAN_CONNECT_TIMEOUT 10000  // how long to wait, in milliseconds
 #define RXBUFFERSIZE  64 // how much to buffer on the incoming side
 #define TXBUFFERSIZE  32 // how much to buffer on the outgoing side
@@ -75,7 +74,7 @@ typedef enum
 
 class Adafruit_CC3000;
 
-class Adafruit_CC3000_Client : public Print {
+class Adafruit_CC3000_Client : virtual public Print {
  public:
   Adafruit_CC3000_Client(uint16_t s);
   Adafruit_CC3000_Client(void);
